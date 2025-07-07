@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop in Shop - B2B 매칭 플랫폼</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+      body {
+        font-family: "Noto Sans KR", sans-serif;
+        background-color: #f7fafc; /* Lighter background */
+        background-image: url("data:image/svg+xml,%3Csvg width='300' height='300' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke-opacity='0.3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3C!-- Yarn Ball and Needles --%3E%3Cg transform='translate(30 40) rotate(-15)' stroke='%23F1A2F2'%3E%3Ccircle cx='15' cy='15' r='10'/%3E%3Cpath d='M15 5 C 10 10, 10 20, 15 25'/%3E%3Cpath d='M15 5 C 20 10, 20 20, 15 25'/%3E%3Cpath d='M2 10 L28 10' stroke-width='1.5'/%3E%3Cpath d='M5 2 L 5 28' stroke-width='1.5'/%3E%3C/g%3E%3C!-- Scissors --%3E%3Cg transform='translate(140 70) rotate(20)' stroke='%237EB0F2'%3E%3Ccircle cx='10' cy='10' r='6'/%3E%3Ccircle cx='25' cy='10' r='6'/%3E%3Cpath d='M15 10 L 30 28'/%3E%3Cpath d='M20 10 L 5 28'/%3E%3C/g%3E%3C!-- Button --%3E%3Cg transform='translate(220 50)' stroke='%23F28705'%3E%3Ccircle cx='15' cy='15' r='12'/%3E%3Ccircle cx='12' cy='12' r='1.5' fill='%23F28705' stroke='none'/%3E%3Ccircle cx='18' cy='12' r='1.5' fill='%23F28705' stroke='none'/%3E%3Ccircle cx='12' cy='18' r='1.5' fill='%23F28705' stroke='none'/%3E%3Ccircle cx='18' cy='18' r='1.5' fill='%23F28705' stroke='none'/%3E%3C/g%3E%3C!-- Sewing Machine --%3E%3Cg transform='translate(80 180)' stroke='%23365902'%3E%3Cpath d='M5 5 h25 v15 h-5 l-5 5 v-5 h-15 z'/%3E%3Ccircle cx='22' cy='12' r='3'/%3E%3Cpath d='M8 5 V 0'/%3E%3C/g%3E%3C!-- Embroidery Hoop --%3E%3Cg transform='translate(200 200)' stroke='%23F24822'%3E%3Ccircle cx='15' cy='15' r='12'/%3E%3Ccircle cx='15' cy='15' r='9'/%3E%3Crect x='13' y='0' width='4' height='3' fill='%23F24822' stroke='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+      .fade-in {
+        animation: fadeIn 1s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center">
+          <div class="relative w-12 h-12 flex items-center justify-center">
+            <i class="fas fa-store text-4xl text-[#7EB0F2]"></i>
+            <i
+              class="fas fa-store text-xl text-[#F1A2F2] absolute"
+              style="top: 10px; left: 12px"
+            ></i>
+          </div>
+          <h1 class="text-2xl font-bold text-[#365902] ml-2">Shop in Shop</h1>
+        </div>
+        <div>
+          <a
+            href="#features"
+            class="text-gray-600 hover:text-[#F28705] px-4 font-semibold"
+            >주요 기능</a
+          >
+          <a
+            href="#pricing"
+            class="text-gray-600 hover:text-[#F28705] px-4 font-semibold"
+            >수수료</a
+          >
+          <a
+            href="#cta"
+            class="bg-[#F28705] text-white px-4 py-2 rounded-full hover:bg-[#F24822] transition"
+            >사전 등록</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-white py-20 fade-in">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 text-[#365902]">
+          새로운 비즈니스 기회,
+          <span class="text-[#F28705]">Shop in Shop</span>에서 찾아보세요.
+        </h2>
+        <p class="text-xl text-gray-600 mb-8">
+          가게 사장님과 상품 판매자를 가장 효율적으로 연결하는 B2B 플랫폼
+        </p>
+        <a
+          href="#cta"
+          class="bg-[#F28705] text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-[#F24822] transition transform hover:scale-105"
+          >지금 바로 시작하기</a
+        >
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h3 class="text-3xl font-bold">당신을 위한 맞춤 기능</h3>
+          <p class="text-gray-600">
+            바이어와 셀러 모두를 만족시키는 강력한 기능을 만나보세요.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Buyer Features -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1"
+          >
+            <div class="flex items-center mb-4">
+              <i class="fas fa-store text-3xl text-[#7EB0F2] mr-4"></i>
+              <h4 class="text-2xl font-bold">바이어 (가게 사장님)</h4>
+            </div>
+            <ul class="space-y-4 text-gray-700">
+              <li>
+                <i class="fas fa-check-circle text-[#7EB0F2] mr-2"></i> 추가
+                수익 창출을 위한 새로운 상품 소싱
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-[#7EB0F2] mr-2"></i> 매입
+                단가, 최소 발주량 등 조건 즉시 확인
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-[#7EB0F2] mr-2"></i> 실시간
+                채팅으로 셀러와 직접 계약 조건 협의
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-[#7EB0F2] mr-2"></i> 간편한
+                계약 및 정산 시스템
+              </li>
+            </ul>
+          </div>
+          <!-- Seller Features -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1"
+          >
+            <div class="flex items-center mb-4">
+              <i class="fas fa-box-open text-3xl text-[#F1A2F2] mr-4"></i>
+              <h4 class="text-2xl font-bold">셀러 (상품 판매자)</h4>
+            </div>
+            <ul class="space-y-4 text-gray-700">
+              <li>
+                <i class="fas fa-check-circle text-[#7EB0F2] mr-2"></i> 전국
+                수만 개의 가게에 내 상품 입점 기회
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-[#7EB0F2] mr-2"></i> 복잡한
+                유통 과정 없이 새로운 판로 개척
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-[#7EB0F2] mr-2"></i> 상품
+                등록만으로 간편하게 유통망 확보
+              </li>
+              <li>
+                <i class="fas fa-check-circle text-[#7EB0F2] mr-2"></i> 투명한
+                조건, 빠른 피드백
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="bg-[#F24822] text-white py-20">
+      <div class="container mx-auto px-6 text-center">
+        <h3 class="text-4xl font-bold mb-4">
+          업계 최저 수준의 합리적인 수수료
+        </h3>
+        <div
+          class="text-6xl font-bold mb-4 inline-block bg-white text-[#F24822] px-6 py-2 rounded-lg shadow-lg"
+        >
+          단 5%
+        </div>
+        <p class="text-xl opacity-90 mt-4">
+          거래 성사 시에만 발생하는 성공 수수료입니다. <br />초기 비용, 월
+          고정비 없이 부담 없이 시작하세요.
+        </p>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h3 class="text-3xl font-bold">먼저 경험해본 파트너들의 후기</h3>
+          <p class="text-gray-500 mt-2">
+            Shop in Shop과 함께 성장한 파트너들의 목소리
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-10">
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 text-center transform hover:-translate-y-2 transition-transform duration-300"
+          >
+            <div class="text-5xl text-[#F28705] mb-4">
+              <i class="fas fa-cookie-bite"></i>
+            </div>
+            <p class="text-gray-600 mb-6 italic">
+              "카페 한 켠에 디저트 코너를 만들고 싶었는데, Shop in Shop 덕분에
+              좋은 파트너를 만나 매출이 30%나 늘었어요!"
+            </p>
+            <div class="font-bold text-gray-800">
+              - 김사장님, 서울시 카페 운영
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 text-center transform hover:-translate-y-2 transition-transform duration-300"
+          >
+            <div class="text-5xl text-[#F1A2F2] mb-4">
+              <i class="fas fa-ring"></i>
+            </div>
+            <p class="text-gray-600 mb-6 italic">
+              "수제 액세서리를 만들지만 판로가 막막했습니다. 이제는 전국
+              편집샵에서 제 반지를 만날 수 있게 되었어요."
+            </p>
+            <div class="font-bold text-gray-800">
+              - 박셀러님, 핸드메이드 액세서리 제작
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-lg p-8 text-center transform hover:-translate-y-2 transition-transform duration-300"
+          >
+            <div class="text-5xl text-[#7EB0F2] mb-4">
+              <i class="fas fa-comments"></i>
+            </div>
+            <p class="text-gray-600 mb-6 italic">
+              "실시간 채팅으로 바로바로 조건을 협의할 수 있어서 정말 편해요.
+              계약까지 하루도 안 걸렸습니다."
+            </p>
+            <div class="font-bold text-gray-800">
+              - 이사장님, 경기도 잡화점 운영
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20">
+      <div class="container mx-auto px-6 max-w-3xl">
+        <div class="text-center mb-12">
+          <h3 class="text-3xl font-bold">자주 묻는 질문 (FAQ)</h3>
+        </div>
+        <div class="space-y-4">
+          <details
+            class="bg-white p-6 rounded-lg shadow-md cursor-pointer group"
+          >
+            <summary
+              class="font-bold text-lg flex justify-between items-center"
+            >
+              플랫폼 이용료는 어떻게 되나요?
+              <i
+                class="fas fa-chevron-down group-open:rotate-180 transition-transform"
+              ></i>
+            </summary>
+            <p class="text-gray-600 mt-4">
+              거래가 성사되었을 때만 거래 금액의 5%를 수수료로 받고 있습니다. 그
+              외 가입비, 월 이용료 등 추가 비용은 일절 없습니다.
+            </p>
+          </details>
+          <details
+            class="bg-white p-6 rounded-lg shadow-md cursor-pointer group"
+          >
+            <summary
+              class="font-bold text-lg flex justify-between items-center"
+            >
+              계약은 어떻게 진행되나요?
+              <i
+                class="fas fa-chevron-down group-open:rotate-180 transition-transform"
+              ></i>
+            </summary>
+            <p class="text-gray-600 mt-4">
+              바이어와 셀러가 플랫폼 내 채팅 기능을 통해 자율적으로 계약 조건을
+              협의합니다. Shop in Shop은 투명하고 안전한 거래 환경을 제공하며,
+              표준 계약서 양식을 제공하여 편의를 돕습니다.
+            </p>
+          </details>
+          <details
+            class="bg-white p-6 rounded-lg shadow-md cursor-pointer group"
+          >
+            <summary
+              class="font-bold text-lg flex justify-between items-center"
+            >
+              어떤 종류의 상품이든 등록할 수 있나요?
+              <i
+                class="fas fa-chevron-down group-open:rotate-180 transition-transform"
+              ></i>
+            </summary>
+            <p class="text-gray-600 mt-4">
+              식품, 잡화, 의류, 핸드메이드 제품 등 대부분의 상품 카테고리를
+              지원합니다. 다만, 관련 법규를 위반하는 상품은 등록이 제한될 수
+              있습니다.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="bg-[#365902] text-white py-20">
+      <div class="container mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold mb-4">
+          새로운 비즈니스 기회가 당신을 기다립니다.
+        </h3>
+        <p class="text-lg text-gray-300 mb-8">
+          지금 사전 등록하고, 런칭 시 가장 먼저 혜택을 받아보세요.
+        </p>
+        <form
+          action="https://formspree.io/f/xnnvygjk"
+          method="POST"
+          class="max-w-md mx-auto flex"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="이메일 주소를 입력하세요"
+            class="w-full px-4 py-3 rounded-l-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#F28705]"
+          />
+          <button
+            type="submit"
+            class="bg-[#F28705] text-white px-8 py-3 rounded-r-full font-bold hover:bg-[#F24822] transition"
+          >
+            사전 등록하기
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-8 border-t">
+      <div class="container mx-auto px-6 text-center text-gray-600">
+        <p>&copy; 2025 Shop in Shop. All Rights Reserved.</p>
+        <div class="mt-4">
+          <a href="#" class="px-2 hover:text-[#F28705]">이용약관</a>
+          <a href="#" class="px-2 hover:text-[#F28705]">개인정보처리방침</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
